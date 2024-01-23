@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility | Spacing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    poppins: ['Poppins']
+                },
+                colors: {
+                    primary: '#e73f'
+                }
+            }
+        }
+    }
+</script>
+
+<body>
+    <!-- Section Spacing | Color | Typography -->
+    <section>
+        <h2>Spacing | Color | Typographi | Utility</h2>
+        <div class="m-3">Margin</div>
+    </section>
+    <section class="mb-6 bg-gradient-to-r from-orange-500 via-lime-500 to-red-400">
+        <h2>sizing</h2>
+        <div class="w-32 h-32 text-4xl bg-primary">Kotak 1</div>
+    </section>
+    <section class="mb-8  font-poppins">
+        <h2 class="mb-5">Typographi</h2>
+        <div class="m-6"><span class="bg-gradient-to-l from-yellow-500 to-lime-200 bg-clip-text text-transparent"> By
+                Faiz 23 Januari 2024</span></div>
+        <p class="mb-5 text-2xl italic text-slate-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse officia quos, minima ex fugiat temporibus
+            earum vel tempore aperiam odit obcaecati repellendus aspernatur labore veniam, laborum eaque omnis, quis
+            magnam! Enim, quidem?
+        </p>
+        <p class="mb-5 bg-gradient-">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse officia quos, minima ex fugiat temporibus
+            earum vel tempore aperiam odit obcaecati repellendus aspernatur labore veniam, laborum eaque omnis, quis
+            magnam! Enim, quidem?
+        </p>
+        <p class="mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse officia quos, minima ex fugiat temporibus
+            earum vel tempore aperiam odit obcaecati repellendus aspernatur labore veniam, laborum eaque omnis, quis
+            magnam! Enim, quidem?
+        </p>
+    </section>
+    <!-- Section Background -->
+    <!-- untuk memasukkan nilai baru diclass yang tidak ada di tailwind, dapat menggunkana [](arbitrary value) disetiap nama property -->
+    <div class="max-w-3xl h-96 bg-slate-400 mx-auto my-12 overflow-y-scroll bg-scroll"
+        style="background-image: url('https://source.unsplash.com/600x800?girl');">
+        <p class="p-5 text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque in suscipit quam vel hic numquam
+            aut itaque ipsa, assumenda magni aliquid, delectus quasi similique voluptates maxime. Sit quod cum,
+            voluptates minus tempore assumenda, nihil, labore nesciunt pariatur tenetur tempora. Iure dolorum voluptates
+            in autem suscipit! Blanditiis sequi odio, numquam perspiciatis aperiam inventore nihil accusamus sint
+            doloremque tenetur eveniet vitae saepe quod sapiente corrupti repellat dolore libero. Suscipit facilis
+            expedita odio, dignissimos nam obcaecati beatae accusamus asperiores in molestiae voluptatum, culpa tenetur
+            tempore, hic temporibus! Debitis provident cum, sed voluptate, amet hic repudiandae, ut labore distinctio
+            corrupti animi facilis optio.
+        </p>
+    </div>
+    <div class="max-w-3xl h-96 bg-slate-400 mx-auto my-12 overflow-y-scroll bg-local"
+        style="background-image: url('https://source.unsplash.com/600x800?girl');">
+        <p class="p-5 text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque in suscipit quam vel hic numquam
+            aut itaque ipsa, assumenda magni aliquid, delectus quasi similique voluptates maxime. Sit quod cum,
+            voluptates minus tempore assumenda, nihil, labore nesciunt pariatur tenetur tempora. Iure dolorum voluptates
+            in autem suscipit! Blanditiis sequi odio, numquam perspiciatis aperiam inventore nihil accusamus sint
+            doloremque tenetur eveniet vitae saepe quod sapiente corrupti repellat dolore libero. Suscipit facilis
+            expedita odio, dignissimos nam obcaecati beatae accusamus asperiores in molestiae voluptatum, culpa tenetur
+            tempore, hic temporibus! Debitis provident cum, sed voluptate, amet hic repudiandae, ut labore distinctio
+            corrupti animi facilis optio.
+        </p>
+    </div>
+    <div class="max-w-3xl h-96 bg-slate-400 mx-auto my-12 overflow-y-scroll bg-fixed"
+        style="background-image: url('https://source.unsplash.com/600x800?girl');">
+        <p class="p-5 text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque in suscipit quam vel hic numquam
+            aut itaque ipsa, assumenda magni aliquid, delectus quasi similique voluptates maxime. Sit quod cum,
+            voluptates minus tempore assumenda, nihil, labore nesciunt pariatur tenetur tempora. Iure dolorum voluptates
+            in autem suscipit! Blanditiis sequi odio, numquam perspiciatis aperiam inventore nihil accusamus sint
+            doloremque tenetur eveniet vitae saepe quod sapiente corrupti repellat dolore libero. Suscipit facilis
+            expedita odio, dignissimos nam obcaecati beatae accusamus asperiores in molestiae voluptatum, culpa tenetur
+            tempore, hic temporibus! Debitis provident cum, sed voluptate, amet hic repudiandae, ut labore distinctio
+            corrupti animi facilis optio.
+        </p>
+    </div>
+
+    <div class="mt-32 max-w-2xl mx-auto mb-2 h-96 bg-slate-400 bg-cover rounded-2xl shadow-2xl shadow-red-400 overflow-hidden border-4 bg-blend-darken"
+        style="background-image: url(/image/photo-1.jpeg);">
+        <!-- <div class="w-full h-full bg-cyan-300 mix-blend-darken"></div> -->
+    </div>
+    <div class="mt-32 max-w-2xl mx-auto mb-96 h-96 bg-slate-400 bg-auto"
+        style="background-image: url(/image/photo-1.jpeg);">
+    </div>
+    <div class="mt-32 max-w-2xl mx-auto mb-96 h-96 bg-slate-400 bg-contain bg-no-repeat"
+        style="background-image: url(/image/photo-1.jpeg);">
+    </div>
+</body>
+
+</html>
