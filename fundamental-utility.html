@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -19,18 +20,26 @@
                     },
                     colors: {
                         primary: '#e73f'
+                    },
+                    animation: {
+                        'spin-slow': 'spin 5s linear infinite',
+                        'goyang': 'goyang 0.5s ease-in infinite'
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0%, 100%': {
+                                transform: 'rotate(10deg)'
+                            },
+                            '50%': {
+                                transform: 'rotate(4deg)'
+                            }
+                        }
                     }
                 }
             }
         }
-    </script>
-    <style>
-        #toggle:checked ~ label div.toggle-circle{
-            @apply translate-x-3;
-        } 
-    </style>
+    </script> -->
 </head>
-
 
 <body class="dark:bg-slate-900 dark:text-slate-100">
     <!-- Section Spacing | Color | Typography -->
@@ -116,6 +125,7 @@
     </div>
 
     <hr class="my-24">
+    <!-- pseudoclass | dark mode -->
 
     <div class="flex justify-center">
         <span class="text-sm text-slate-200 m-2">Light</span>
@@ -153,7 +163,171 @@
         </form>
     </div>
 
+    <!-- transform | transition | animation -->
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-16 block rounded-lg shadow-lg scale-50"></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-16 block rounded-lg shadow-lg scale-150 rotate-45"></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-16 block rounded-lg shadow-lg hover:scale-150 hover:rotate-45"></div>
+    <div
+        class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-lg shadow-lg hover:scale-100 hover:rotate-45 hover:translate-x-9 transition-colors hover:bg-red-600">
+    </div>
+
+    <div class="w-40 h-40 bg-red-400 mx-auto mt-20 group">
+        <div class="w-full h-full bg-sky-400 rounded-lg shadow-lg group-hover:rotate-45 transition duration-500"></div>
+    </div>
     <div class="mb-40"></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-lg shadow-lg animate-spin "></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-lg shadow-lg animate-spin-slow "></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-lg shadow-lg animate-goyang "></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-full shadow-lg animate-ping "></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-full shadow-lg animate-pulse "></div>
+    <div class="w-40 h-40 bg-sky-500 mx-auto my-40 block rounded-full shadow-lg animate-bounce "></div>
+
+    <hr class="my-20 borderd-t-8">
+
+    <!-- layouting -->
+    <div class="container mx-auto ">
+        <!-- position -->
+        <div class="border rounded-lg shadow-md p-8 relative">
+            <!-- <div class="w-10 h-10 bg-red-500 rounded-full flex absolute -top-5 -right-5"><span
+                    class="text-xl m-auto">❌</span></div> -->
+            <img src="/image/photo-1.jpeg" alt="" width="150" class="float-right">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab ullam laborum deleniti inventore eos at
+                corporis doloremque nostrum repellat autem totam, accusantium, provident dolorum quas asperiores
+                consequuntur molestiae cum temporibus? Minima veritatis obcaecati deleniti quibusdam totam omnis
+                voluptatibus, atque, illo quaerat cum sint hic perferendis quidem. A doloremque maxime exercitationem
+                ipsum, dolorum tempora in saepe enim magnam beatae cum, incidunt omnis iste id, repudiandae accusamus!
+                Ullam excepturi quo corrupti, dolore, sequi quod necessitatibus temporibus nam porro esse tempore
+                officiis non reprehenderit, nobis optio cumque id architecto! Deleniti, fuga beatae facilis, accusamus
+                aliquam vel quas voluptates rem, esse illo cupiditate porro?
+            </p>
+        </div>
+    </div>
+
+    <div class="container mx-auto mt-10 border rounded-lg shadow-md p-8 columns-3">
+        <img src="https://source.unsplash.com/600x400?food" alt="">
+        <img src="https://source.unsplash.com/600x400?food" alt="">
+        <img src="https://source.unsplash.com/600x400?food" alt="">
+        <img src="https://source.unsplash.com/600x400?food" alt="">
+        <img src="https://source.unsplash.com/600x400?food" alt="">
+        <img src="https://source.unsplash.com/600x400?food" alt="">
+    </div>
+
+    <!-- responsive | flex | grid-->
+    <hr class="my-10 border-t-4">
+    <div
+        class="container mx-auto px-6 font-poppins max-w-lg sm:bg-red-800 sm:max-w-4xl md:bg-transparent lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-20 lg:flex-1">
+            <h3 class="text-2xl font-bold text-slate-700 sm:text-4xl">F A I Z</h3>
+            <img src="/image/photo-1.jpeg" alt=""
+                class="mt-3 rounded-xl shadow-md sm:w-full sm:mt-6 sm:h-64 sm:object-cover sm:object-top lg:hidden ">
+            <h4 class="mt-5 text-lg font-semibold text-slate-600 sm:text-xl">TailwindCSS</h4>
+            <p class="mt-2 text-slate-400">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae illo dolore totam velit obcaecati
+                incidunt, maxime soluta numquam sit temporibus ea aperiam est nobis corrupti, provident recusandae
+                mollitia.
+                Ratione doloremque enim dolorem aliquam ab voluptas quia suscipit aspernatur et culpa.
+            </p>
+            <div class="mt-6">
+                <a href="#"
+                    class="inline-block px-3 py-3 text-white rounded-lg shadow-lg font-semibold bg-sky-300 text-sm sm:text-xl">Purchase</a>
+            </div>
+        </div>
+        <div>
+            <div class="hidden lg:flex lg:w-1\2">
+                <img src="/image/photo-1.jpeg" alt="" width="600" class="object-cover rounded-tl-xl rounded-bl-xl">
+            </div>
+        </div>
+    </div>
+    <!-- flex -->
+    <h2 class="mt-24 mb-10 font-poppins text-3xl text-center font-bold">My Galery
+    </h2>
+    <div class="container mx-auto px-6 sm:flex sm:flex-wrap sm:justify-center sm:gap-4
+    ">
+        <div class="rounded-xl shadow-lg overflow-hidden mb-8 sm:w-64 md:w-80 sm:mb-0 lg:w-72">
+            <img src="https://source.unsplash.com/600x400?food" alt="" class="w-full">
+            <div class="p-5">
+                <figcaption class="font-bold text-xl text-slate-700 mb-2">Food image</figcaption>
+                <p class="text-slate-400 text-sm">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, quae! Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ea, optio?
+                </p>
+            </div>
+        </div>
+        <div class="rounded-xl shadow-lg overflow-hidden mb-8 sm:w-64 md:w-80 sm:mb-0 lg:w-72">
+            <img src="https://source.unsplash.com/600x400?food" alt="" class="w-full">
+            <div class="p-5">
+                <figcaption class="font-bold text-xl text-slate-700 mb-2">Food image</figcaption>
+                <p class="text-slate-400 text-sm">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, quae! Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ea, optio?
+                </p>
+            </div>
+        </div>
+        <div class="rounded-xl shadow-lg overflow-hidden mb-8 sm:w-64 md:w-80 sm:mb-0 lg:w-72">
+            <img src="https://source.unsplash.com/600x400?food" alt="" class="w-full">
+            <div class="p-5">
+                <figcaption class="font-bold text-xl text-slate-700 mb-2">Food image</figcaption>
+                <p class="text-slate-400 text-sm">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, quae! Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ea, optio?
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- grid -->
+    <div class="mt-64 p-6 font-poppins grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4">
+        <h2 class=" text-2xl font-semibold text-slate-500 md:col-start-4 md:row-start-2 md:flex"><span
+                class="self-start">F A S H I O N</span></h2>
+        <div class=" text-lg font-bold text-slate-400 md:col-start-2 md:row-start-2 md:flex"><span
+                class="self-end">FAIZ</span></div>
+        <!-- group tidak bisa dipakai kedalam component -->
+        <div class="group grid-card">
+            <div class="grid-img-card bg-[url('/image/fashion-1.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-img-card bg-[url('/image/fashion-2.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-img-card bg-[url('/image/fashion-3.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-img-card bg-[url('/image/fashion-4.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-img-card bg-[url('/image/fashion-5.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card md:col-start-2 ">
+            <div class="grid-img-card bg-[url('/image/fashion-6.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card md:col-start-4 ">
+            <div class="grid-img-card bg-[url('/image/fashion-7.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card">
+            <div class="grid-img-card bg-[url('/image/fashion-8.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-img-card bg-[url('/image/fashion-9.jpeg')]">
+            </div>
+        </div>
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-img-card bg-[url('/image/fashion-10.jpeg')]">
+            </div>
+        </div>
+    </div>
+
+    <!--  functions & directives  -->
+
+    <div class="mb-80">
+    </div>
 </body>
 
 </html>
