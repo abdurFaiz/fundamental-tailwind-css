@@ -326,7 +326,30 @@
 
     <!--  functions & directives  -->
 
+    
     <div class="mb-80">
+    <!-- cara arbitrary varian, penambahan component / value bukan dari tailwind -->
+    <ul class=" w-2/3  mb-96 mt-96 mx-auto gap-4 [&>li:nth-child(4)]:bg-pink-400 [&>li:nth-child(3)>div>span:nth-child(2)]:bg-black">
+        <li class="bg-sky-200 rounded-lg py-3 mb-2 px-6 text-base text-center text-sky-700 ">
+            item 1
+        </li>
+        <li class="bg-sky-200 rounded-lg py-3 mb-2 px-6 text-base text-center text-sky-700 ">
+            item 2
+        </li>
+        <li class="bg-sky-200 rounded-lg py-3 mb-2 px-6 text-base text-center text-sky-700">
+            <div>
+                <span class="size-6 bg-red-400 inline-block"></span>
+                <span class="size-6 bg-red-400 inline-block"></span>
+                <span class="size-6 bg-red-400 inline-block"></span>
+            </div>
+        </li>
+        <li class="bg-sky-200 rounded-lg py-3 mb-2 px-6 text-base text-center text-sky-700">
+            item 4
+        </li>
+        <li class="bg-sky-200 rounded-lg py-3 mb-2 px-6 text-base text-center text-sky-700">
+            item 5
+        </li>
+    </ul>
     </div>
 </body>
 
